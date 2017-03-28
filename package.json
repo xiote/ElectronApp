@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "electron-builder": "~16.4.2",
+    "electron-prebuilt": "~1.4.13"    
+  },
+  "build": {
+    "appId": "electron-app.company",
+    "win": {
+            "iconUrl": "http://ssl.rband.kr/images/exam.ico"
+        }
+  },
+  "scripts": {
+    "start": "electron ./app --enable-logging",
+    "dist": "build --win",
+
+    "postinstall": "install-app-deps",    
+    "dev": "NODE_ENV='development' npm run start"
+  }
+}
+
+
